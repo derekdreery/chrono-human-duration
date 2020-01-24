@@ -24,17 +24,29 @@ impl fmt::Display for Displayer {
 
         let weeks = d.num_weeks();
         if weeks > 0 {
-            write!(f, "{} weeks", weeks)?;
+            write!(f, "{} week{}", weeks, if weeks == 1 { "s" } else { "" })?;
             wrote = true;
         } else {
             let days = d.num_days();
             if days > 0 {
-                write!(f, "{}{} days", if wrote { ", " } else { "" }, days)?;
+                write!(
+                    f,
+                    "{}{} day{}",
+                    if wrote { ", " } else { "" },
+                    days,
+                    if days == 1 { "s" } else { "" }
+                )?;
                 wrote = true;
             } else {
                 let hours = d.num_hours();
                 if hours > 0 {
-                    write!(f, "{}{} hours", if wrote { ", " } else { "" }, hours)?;
+                    write!(
+                        f,
+                        "{}{} hour{}",
+                        if wrote { ", " } else { "" },
+                        hours,
+                        if days == 1 { "s" } else { "" }
+                    )?;
                     wrote = true;
                 }
             }

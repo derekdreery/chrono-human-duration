@@ -1,11 +1,12 @@
 [package]
 name = "chrono-human-duration"
 description = "Simple human formatting of chrono::Duration"
-version = "0.1.0"
+version = "0.1.1"
 license = "Apache-2.0/MIT"
 authors = ["Richard Dodd <richard.o.dodd@gmail.com>"]
 edition = "2018"
 readme = "README.md"
+repository = "https://github.com/derekdreery/chrono-human-duration"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
